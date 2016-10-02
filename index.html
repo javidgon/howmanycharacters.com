@@ -3,16 +3,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Angular Material style sheet -->
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
-  <script src="static/less/main.less"></script>
+  <link rel="stylesheet/less" type="text/css" href="static/less/main.less"/>
 </head>
 <body ng-app="MainApp" layout="column" ng-cloak>
 
-  <md-toolbar layout="row">
-      <h1>HowManyCharacters</h1>
-  </md-toolbar>
-
-  <div flex layout="row">
-  </div>
+  <md-content flex md-theme="docs-dark" layout-padding layout="row" layout-align="center center">
+    <div>
+      <md-input-container class="form-title-input">
+        <label>Name a Book</label>
+        <input ng-model="user.title">
+      </md-input-container>
+    </div>
+  </md-content>
   <!-- Angular Material requires Angular.js Libraries -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
@@ -25,7 +27,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.min.js"></script>
 
   <!-- Your application bootstrap  -->
-  <script src="static/js/main.module.js"></script>
+  <script src="static/js/main.js"></script>
 
 </body>
 </html>
